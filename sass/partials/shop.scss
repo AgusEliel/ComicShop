@@ -14,6 +14,18 @@
         color: white;
         margin-top: 70px;
         &__title {
+            font-size: 1.3rem;
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        &__precio {
+            font-size: 1.3rem;
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        &__h1 {
             font-size: 4rem;
         }
     }

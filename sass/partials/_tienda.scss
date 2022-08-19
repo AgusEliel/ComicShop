@@ -1,0 +1,19 @@
+#shop__content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 2fr));
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.comic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 30px;
+}

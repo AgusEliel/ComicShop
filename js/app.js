@@ -11,15 +11,46 @@ let stockComics = [
 
 const contenedorComics = document.getElementById("shop__content");
 
+const carritoComics = document.getElementById("comics__carrito");
+
+let carrito = [];
+
 stockComics.forEach((comic) => {
     const div = document.createElement("div");
     div.classList.add("comic");
     div.innerHTML = `
     <img src=${comic.img} alt="">
-    <h3>${comic.nombre}</h3>
-    <p class="precioComic">Precio:$ ${comic.precio}</p>
-    <button id="agregar${comic.id}" class="boton__agregar"></button>
+    <p class="shop__contenttitle__title">${comic.nombre}</p>
+    <p class="shop__contenttitle__precio">Precio: $${comic.precio}</p>
+    <button type='button' id="agregar${comic.id}" class="shop__content__art__btn">AGREGAR AL CARRITO</button>
     `;
 
     contenedorComics.appendChild(div);
+
+    let boton = document.getElementById("agregar${comic.id}");
+    boton.addEventListener("click", () => {
+        agregarAlCarrito(comic.id);
+    });
 });
+
+const agregarAlCarrito = (prodId) => {
+    const item = stockComics.find((prod) => prod.id === prodId);
+    carrito.push(item);
+    actualizarCarrito();
+    console.log(carrito);
+};
+
+const actualizarCarrito = () => {
+    contenedorComics.innerHTML = "";
+    carrito.forEach((prod) => {
+        const div = document.createElement("div");
+        div.className = "comicEnCarrito";
+        div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Precio: $${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick = "eliminarDelCarrito(${prod.id})" class="boton__eliminar fas fa-trash-alt"></button>
+        `;
+        contenedorComics.appendChild(div);
+    });
+};
