@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/main.css" />
         <script src="https://kit.fontawesome.com/b457f9cfea.js" crossorigin="anonymous"></script>
+        <script defer src="./js/stock.js"></script>
+        <script defer src="./js/index.js"></script>
+        <script defer src="./js/modal.js"></script>
         <title>ComicShop</title>
     </head>
     <body>
@@ -29,113 +32,33 @@
                     </li>
                     <div class="closeMenu"><i class="fa fa-times"></i></div>
                 </ul>
-                <div id="comics__carrito" class="cart">
-                    <i id="comics__carrito" class="fa-solid fa-cart-shopping"> 0</i>
+                <div class="cart">
+                    <button id="boton__carrito">
+                        <i class="fa-solid fa-cart-shopping">
+                            <span id="contador__carrito"> 0</span>
+                        </i>
+                    </button>
                 </div>
             </nav>
         </header>
-        <main class="shop">
+        <div class="shop">
             <div class="shop__contenttitle">
                 <p class="shop__contenttitle__h1">TIENDA</p>
             </div>
-            <div id="shop__content" class="shop__content"></div>
-        </main>
+            <div id="shop__content"></div>
+        </div>
 
-        <!-- <section class="shop">
-            <div class="shop__contenttitle">
-                <p class="shop__contenttitle__title">TIENDA</p>
+        <div class="modal__contenedor">
+            <div class="modal__contenedor__carrito">
+                <h3>Carrito</h3>
+                <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                <div id="carrito__contenedor"></div>
+                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                <button id="vaciar__carrito" class="boton-agregar">Vaciar carrito</button>
+                <div id="contenedor__comics"></div>
             </div>
-            <div id="shop__content" class="shop__content">
-                <div class="shop__content__art">
-                    <div class="shop__content__art__box">
-                        <p class="shop__content__art__box__title">BATMAN VOL.1</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="shop__content__art__img">
-                        <img class="shop__content__art__img__image" src="./images/batman.png" alt="" />
-                    </div>
-                    <p class="shop__content__art__price">500$</p>
-                    <button class="shop__content__art__btn">AGREGAR AL CARRITO</button>
-                </div>
-                <div class="shop__content__art">
-                    <div class="shop__content__art__box">
-                        <p class="shop__content__art__box__title">BATMAN VOL.1</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="shop__content__art__img">
-                        <img class="shop__content__art__img__image" src="./images/batman.png" alt="" />
-                    </div>
-                    <p class="shop__content__art__price">500$</p>
-                    <button class="shop__content__art__btn">AGREGAR AL CARRITO</button>
-                </div>
-                <div class="shop__content__art">
-                    <div class="shop__content__art__box">
-                        <p class="shop__content__art__box__title">BATMAN VOL.1</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="shop__content__art__img">
-                        <img class="shop__content__art__img__image" src="./images/batman.png" alt="" />
-                    </div>
-                    <p class="shop__content__art__price">500$</p>
-                    <button class="shop__content__art__btn">AGREGAR AL CARRITO</button>
-                </div>
-                <div class="shop__content__art">
-                    <div class="shop__content__art__box">
-                        <p class="shop__content__art__box__title">BATMAN VOL.1</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="shop__content__art__img">
-                        <img class="shop__content__art__img__image" src="./images/batman.png" alt="" />
-                    </div>
-                    <p class="shop__content__art__price">500$</p>
-                    <button class="shop__content__art__btn">AGREGAR AL CARRITO</button>
-                </div>
-                <div class="shop__content__art">
-                    <div class="shop__content__art__box">
-                        <p class="shop__content__art__box__title">BATMAN VOL.1</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="shop__content__art__img">
-                        <img class="shop__content__art__img__image" src="./images/batman.png" alt="" />
-                    </div>
-                    <p class="shop__content__art__price">500$</p>
-                    <button class="shop__content__art__btn">AGREGAR AL CARRITO</button>
-                </div>
-                <div class="shop__content__art">
-                    <div class="shop__content__art__box">
-                        <p class="shop__content__art__box__title">BATMAN VOL.1</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="shop__content__art__img">
-                        <img class="shop__content__art__img__image" src="./images/batman.png" alt="" />
-                    </div>
-                    <p class="shop__content__art__price">500$</p>
-                    <button class="shop__content__art__btn">AGREGAR AL CARRITO</button>
-                </div>
-                <div class="shop__content__art">
-                    <div class="shop__content__art__box">
-                        <p class="shop__content__art__box__title">SPIDERMAN</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="shop__content__art__img">
-                        <img class="shop__content__art__img__image" src="./images/spiderman.png" alt="" />
-                    </div>
-                    <p class="shop__content__art__price">500$</p>
-                    <button class="shop__content__art__btn">AGREGAR AL CARRITO</button>
-                </div>
-                <div class="shop__content__art">
-                    <div class="shop__content__art__box">
-                        <p class="shop__content__art__box__title">FLASH</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="shop__content__art__img">
-                        <img class="shop__content__art__img__image" src="./images/flash.png" alt="" />
-                    </div>
-                    <p class="shop__content__art__price">500$</p>
-                    <button class="shop__content__art__btn">AGREGAR AL CARRITO</button>
-                </div>
-            </div>
-        </section> -->
+        </div>
+
         <footer class="footer">
             <div class="footer__logo">
                 <img class="footer__logo__img" src="./images/logobatman.png" alt="" />
@@ -154,6 +77,5 @@
                 </div>
             </div>
         </footer>
-        <script src="./js/index.js"></script>
     </body>
 </html>
