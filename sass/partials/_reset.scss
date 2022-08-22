@@ -6,6 +6,10 @@
     margin: 0px;
     box-sizing: border-box;
 }
+*::selection {
+    background: #ffffff;
+    color: $red;
+}
 
 img::selection {
     background: none;
@@ -21,6 +25,19 @@ body {
     font-size: 100%;
     background-color: #131313;
     line-height: 1.44;
+}
+
+body::-webkit-scrollbar {
+    width: 0.2rem;
+}
+body::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+body::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: $red;
 }
 
 a {
@@ -48,4 +65,8 @@ img {
 
 ul {
     list-style: none;
+}
+
+.fa-brands {
+    cursor: pointer;
 }

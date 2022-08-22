@@ -10,22 +10,21 @@
     transition: all 0.5s;
     opacity: 0;
     visibility: hidden;
+    &__carrito {
+        position: relative;
+        background-color: #131313;
+        min-width: 500px;
+        padding: 20px;
+        margin-top: -100%;
+        transition: all 0.5s;
+        color: #ffffff;
+        border-radius: 15px;
+    }
 }
 
 .modal__active {
     opacity: 1;
     visibility: visible;
-}
-
-.modal__contenedor__carrito {
-    position: relative;
-    background-color: #131313;
-    min-width: 500px;
-    padding: 20px;
-    margin-top: -100%;
-    transition: all 0.5s;
-    color: #ffffff;
-    border-radius: 15px;
 }
 
 .modal__active .modal__contenedor__carrito {
@@ -80,7 +79,7 @@
     border: none;
     color: white;
     cursor: pointer;
-    transition: background-color 350ms;
+    transition: transform 350ms;
     &:hover {
         transition: 350ms;
         transform: scale(1.15);
@@ -91,6 +90,7 @@
     display: flex;
     width: 150px;
     height: 35px;
+    font-family: "Poppins", sans-serif;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
@@ -100,7 +100,7 @@
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 350ms;
+    transition: transform 350ms;
     padding: 15px;
 }
 
@@ -117,7 +117,7 @@
     color: white;
     font-weight: 400;
     cursor: pointer;
-    transition: background-color 350ms;
+    transition: transform 350ms;
 
     &:hover {
         transition: 350ms;
