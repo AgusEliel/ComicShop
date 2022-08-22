@@ -63,7 +63,7 @@ ul {
 
 .background {
   height: 100vh;
-  background-image: url(./images/wallpaper.jpg);
+  background-image: url(../images/wallpaper.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: 100%;
@@ -71,11 +71,11 @@ ul {
 
 @keyframes fadeIn {
   0% {
-    background-image: url(./images/wallpaper.jpg); }
+    background-image: url(../images/wallpaper.jpg); }
   33% {
-    background-image: url(./images/wallpaper2.jpg); }
+    background-image: url(../images/wallpaper2.jpg); }
   67% {
-    background-image: url(./images/wallpaper3.jpg); } }
+    background-image: url(../images/wallpaper3.jpg); } }
 
 #header {
   top: 0;
