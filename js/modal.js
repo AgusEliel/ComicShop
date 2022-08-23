@@ -14,6 +14,5 @@ contenedorModal.addEventListener("click", (event) => {
     contenedorModal.classList.toggle("modal__active");
 });
 modalCarrito.addEventListener("click", (event) => {
-    event.stopPropagation(); //cuando clickeo sobre el modal se finaliza la propagacion del click a los elementos
-    //padre
+    event.stopPropagation(); 
 });
