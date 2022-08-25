@@ -114,13 +114,13 @@ nav .mainMenu {
 
 nav .mainMenu li a {
   display: inline-block;
-  padding: 15px;
+  padding: 30px;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
   font-size: 16px;
   transition: 350ms;
-  font-weight: 400; }
+  font-weight: 500; }
 
 nav .mainMenu li a:hover {
   color: #fb2136; }
