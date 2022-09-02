@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/main.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/b457f9cfea.js" crossorigin="anonymous"></script>
         <script defer src="./js/stock.js"></script>
         <script defer src="./js/index.js"></script>
@@ -45,7 +46,7 @@
             <div class="shop__contenttitle">
                 <p class="shop__contenttitle__h1">TIENDA</p>
             </div>
-            <div id="shop__content"></div>
+            <div data-aos="fade-down" id="shop__content"></div>
         </div>
 
         <div class="modal__contenedor">
@@ -79,5 +80,9 @@
             </div>
         </footer>
         <script src="./js/header.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
